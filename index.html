@@ -114,34 +114,6 @@
             margin-top: 10px;
         }
 
-        /* インタラクティブ要素（JS用） */
-        .btn-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .action-btn {
-            background-color: #0066cc;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 0.9rem;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-        .action-btn:hover {
-            background-color: #004499;
-        }
-        .message-box {
-            margin-top: 15px;
-            padding: 12px;
-            background-color: #e6f2ff;
-            border-left: 4px solid #0066cc;
-            border-radius: 4px;
-            display: none;
-            font-size: 0.9rem;
-        }
-
         /* フッター */
         footer {
             text-align: center;
@@ -232,36 +204,11 @@
             <div class="notice-box">
                 ※学内限定：課題提出用の連絡や質問は、大学から指定されたポータル内のメッセージ機能、または授業用Slack・Teams等をご利用ください。
             </div>
-
-            <div class="btn-container">
-                <button class="action-btn" id="checkBtn">動作確認ボタン</button>
-                <div class="message-box" id="msgBox">
-                    HTML内のJavaScriptが正常に作動しています！この文章は自分の言葉に適宜修正して提出してください。
-                </div>
-            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2026 Student Portfolio. All Rights Reserved.</p>
     </footer>
-
-    <script>
-        // ボタンクリック時のインタラクション処理
-        document.addEventListener('DOMContentLoaded', function() {
-            const checkBtn = document.getElementById('checkBtn');
-            const msgBox = document.getElementById('msgBox');
-
-            checkBtn.addEventListener('click', function() {
-                if (msgBox.style.display === 'block') {
-                    msgBox.style.display = 'none';
-                    checkBtn.textContent = '動作確認ボタン';
-                } else {
-                    msgBox.style.display = 'block';
-                    checkBtn.textContent = 'メッセージを閉じる';
-                }
-            });
-        });
-    </script>
 </body>
 </html>
