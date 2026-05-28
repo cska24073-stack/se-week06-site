@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>自己紹介ポートフォリオ</title>
     <style>
         /* 基本スタイル・リセット */
         * {
@@ -15,7 +15,7 @@
             font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f9f9f9;
+            background-color: #f4f6f8;
             padding-bottom: 60px;
         }
         a {
@@ -26,7 +26,7 @@
         /* ヘッダー・ナビゲーション */
         header {
             background-color: #fff;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #e0e0e0;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -41,7 +41,8 @@
         }
         .logo {
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
+            color: #111;
         }
         .nav-links {
             display: flex;
@@ -52,29 +53,29 @@
             color: #555;
             font-size: 0.9rem;
             font-weight: 500;
-            transition: color 0.3s;
+            transition: color 0.2s;
         }
         .nav-links a:hover {
             color: #0066cc;
         }
 
-        /* メインコンテンツの外枠 */
+        /* メインエリア */
         main {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
         }
 
-        /* 各セクションの共通スタイル */
+        /* 各セクションのスタイル */
         section {
             background-color: #fff;
-            margin: 30px 0;
-            padding: 30px 20px;
+            margin: 25px 0;
+            padding: 30px 25px;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
         h2 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: #111;
             margin-bottom: 15px;
             border-left: 4px solid #0066cc;
@@ -83,19 +84,37 @@
         p {
             margin-bottom: 15px;
             font-size: 0.95rem;
+            text-align: justify;
         }
 
-        /* リストのスタイル */
+        /* リストスタイル */
         ul {
             padding-left: 20px;
             margin-bottom: 15px;
         }
         li {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             font-size: 0.95rem;
         }
+        .work-detail {
+            margin-top: 4px;
+            font-size: 0.88rem;
+            color: #666;
+            display: block;
+        }
 
-        /* インタラクティブ要素（JavaScript検証用） */
+        /* 注意書き・連絡先エリアの制限用スタイル */
+        .notice-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-top: 10px;
+        }
+
+        /* インタラクティブ要素（JS用） */
         .btn-container {
             text-align: center;
             margin-top: 20px;
@@ -108,14 +127,14 @@
             font-size: 0.9rem;
             border-radius: 4px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.2s;
         }
         .action-btn:hover {
             background-color: #004499;
         }
         .message-box {
             margin-top: 15px;
-            padding: 10px;
+            padding: 12px;
             background-color: #e6f2ff;
             border-left: 4px solid #0066cc;
             border-radius: 4px;
@@ -126,35 +145,32 @@
         /* フッター */
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 15px;
             font-size: 0.8rem;
             color: #777;
             background-color: #fff;
-            border-top: 1px solid #ddd;
+            border-top: 1px solid #e0e0e0;
             position: fixed;
             bottom: 0;
             width: 100%;
         }
 
-        /* スマートフォン向け調整（画面幅600px以下） */
+        /* スマートフォン向けレスポンシブデザイン（画面幅600px以下） */
         @media (max-width: 600px) {
             nav {
                 flex-direction: column;
-                gap: 10px;
-                padding: 10px;
+                gap: 8px;
+                padding: 12px;
             }
             .nav-links {
                 gap: 12px;
             }
-            .nav-links a {
-                font-size: 0.85rem;
-            }
             section {
                 padding: 20px 15px;
-                margin: 20px 0;
+                margin: 15px 0;
             }
             h2 {
-                font-size: 1.3rem;
+                font-size: 1.25rem;
             }
         }
     </style>
@@ -163,7 +179,7 @@
 
     <header>
         <nav>
-            <div class="logo">My Portfolio</div>
+            <div class="logo">学生ポートフォリオ</div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -176,66 +192,74 @@
     <main>
         <section id="about">
             <h2>About</h2>
-            <p>はじめまして。こちらは私の自己紹介用のポートフォリオWebサイトです。現在はWeb開発の基礎や、最新のテクノロジーを活用した効率的なものづくりについて学んでいます。</p>
-            <p>このサイトは、HTML、CSS、JavaScriptを1つのファイルにまとめ、スマートフォンからでも快適に閲覧できるようにデザインされています。</p>
+            <p>大学の講義を通じて、情報技術の基礎やWebデザイン、プログラムの構築方法について広く学んでいます。</p>
+            <p><strong>現在の関心分野・学んでいること：</strong><br>
+            特に情報社会におけるデータ利活用や、生成AI（LLM）を用いた効率的な開発プロセスに興味を持っています。授業ではただコードを書くだけでなく、「ユーザーにとって使いやすい画面設計（UI/UX）」を意識したアプローチを勉強中です。</p>
         </section>
 
         <section id="skills">
             <h2>Skills</h2>
-            <p>これまでに触れてきた技術や、現在習得に向けて取り組んでいるスキルの一覧です。</p>
+            <p>本サイトの構築や授業の演習で使用している技術スタックです。</p>
             <ul>
-                <li><strong>HTML5 / CSS3:</strong> 基本的なマークアップと、メディアクエリを用いたレスポンシブWebデザイン。</li>
-                <li><strong>JavaScript:</strong> DOM操作を中心とした、Webサイトへの動的な機能の追加。</li>
-                <li><strong>LLMの活用:</strong> プロンプトデザインや、AIツールと協働した効率的なコード生成。</li>
+                <li><strong>HTML5 / CSS3:</strong> セマンティックなマークアップ、メディアクエリを用いたスマートフォン表示への最適化。</li>
+                <li><strong>JavaScript:</strong> 標準機能のみを用いたイベントハンドリングとDOM操作。</li>
+                <li><strong>AIリテラシー:</strong> 適切なプロンプトによるコード生成と、要件定義に沿ったデバッグ・修正。</li>
             </ul>
         </section>
 
         <section id="works">
             <h2>Works</h2>
-            <p>これまでに制作した成果物や、取り組んだ演習の記録です。</p>
+            <p>これまでの授業や演習の中で作成した成果物の概要と、その説明です。</p>
             <ul>
                 <li>
-                    <strong>1. 自己紹介用静的Webサイト（本サイト）</strong>
-                    <p style="margin-top: 5px; font-size: 0.85rem; color: #555;">外部ライブラリを一切使用せず、単一のHTMLファイルのみで完結させた軽量なポートフォリオです。</p>
+                    <strong>1. 自己紹介用ポートフォリオページ（本サイト）</strong>
+                    <span class="work-detail">外部のCSSフレームワークやJavaScriptライブラリを一切頼らず、HTMLファイル1枚（シングルファイル）の中にスタイルとスクリプトを内包させた軽量なWebサイトです。</span>
                 </li>
                 <li>
-                    <strong>2. 今後のロードマップ</strong>
-                    <p style="margin-top: 5px; font-size: 0.85rem; color: #555;">今後はAPIを連携させた動的なアプリケーションや、UXに配慮したデザインの構築に挑戦する予定です。</p>
+                    <strong>2. 授業での制作課題・ミニワーク</strong>
+                    <span class="work-detail">これまでの演習では、アルゴリズムの基礎を学ぶための簡単な計算ロジックの実装や、レイアウト崩れを防ぐレスポンシブ対応の基礎演習に取り組みました。</span>
                 </li>
             </ul>
         </section>
 
         <section id="reflection">
-            <h2>Reflection</h2>
-            <p>今回のWebサイト制作を通じて、LLM（大規模言語モデル）へ明確な制約条件を提示することの重要性を学びました。「1ファイルにまとめる」「外部CDNを使わない」といった具体的な指示を出すことで、手戻りのない正確な成果物を素早く得られることを実感しました。</p>
-            <p>また、コードを出力させるだけでなく、ユーザーに合わせた文章表現へのカスタマイズや、スマートフォンでの実機検証を重ねることで、より実用的な成果物にブラッシュアップできると感じています。</p>
+            <h2>Reflection & Contact</h2>
+            <p><strong>振り返り：</strong><br>
+            提示された技術要件（1ファイルで動かす、スマートフォンでも快適に読める）を満たすために、外部CDNに依存しないピュアなコード設計を行いました。実機の画面幅を想定したCSSメディアクエリの設計や、安全な情報開示の範囲を考慮する重要性を再確認できました。</p>
+            
+            <p><strong>連絡先について：</strong><br>
+            セキュリティおよびプライバシー保護の観点から、インターネット上に個人の連絡先（電話番号・個人のメールアドレス等）は掲載していません。御用の際は、大学の学務システム、または担当教員を通じてご連絡ください。</p>
+            
+            <div class="notice-box">
+                ※学内限定：課題提出用の連絡や質問は、大学から指定されたポータル内のメッセージ機能、または授業用Slack・Teams等をご利用ください。
+            </div>
 
             <div class="btn-container">
-                <button class="action-btn" id="greetBtn">ここをクリックして挨拶を表示</button>
-                <div class="message-box" id="messageBox">
-                    ご覧いただきありがとうございます！文章はご自身の言葉に適宜書き換えてご活用ください。
+                <button class="action-btn" id="checkBtn">動作確認ボタン</button>
+                <div class="message-box" id="msgBox">
+                    HTML内のJavaScriptが正常に作動しています！この文章は自分の言葉に適宜修正して提出してください。
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 My Portfolio. All Rights Reserved.</p>
+        <p>&copy; 2026 Student Portfolio. All Rights Reserved.</p>
     </footer>
 
     <script>
-        // JavaScriptによる簡易的な動的処理の追加
+        // ボタンクリック時のインタラクション処理
         document.addEventListener('DOMContentLoaded', function() {
-            const greetBtn = document.getElementById('greetBtn');
-            const messageBox = document.getElementById('messageBox');
+            const checkBtn = document.getElementById('checkBtn');
+            const msgBox = document.getElementById('msgBox');
 
-            greetBtn.addEventListener('click', function() {
-                if (messageBox.style.display === 'block') {
-                    messageBox.style.display = 'none';
-                    greetBtn.textContent = 'ここをクリックして挨拶を表示';
+            checkBtn.addEventListener('click', function() {
+                if (msgBox.style.display === 'block') {
+                    msgBox.style.display = 'none';
+                    checkBtn.textContent = '動作確認ボタン';
                 } else {
-                    messageBox.style.display = 'block';
-                    greetBtn.textContent = 'メッセージを閉じる';
+                    msgBox.style.display = 'block';
+                    checkBtn.textContent = 'メッセージを閉じる';
                 }
             });
         });
