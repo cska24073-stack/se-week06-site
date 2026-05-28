@@ -1,11 +1,244 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="utf-8">
-    <title>自己紹介</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* 基本スタイル・リセット */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            padding-bottom: 60px;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        /* ヘッダー・ナビゲーション */
+        header {
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        .logo {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 15px;
+        }
+        .nav-links a {
+            color: #555;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #0066cc;
+        }
+
+        /* メインコンテンツの外枠 */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 各セクションの共通スタイル */
+        section {
+            background-color: #fff;
+            margin: 30px 0;
+            padding: 30px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        h2 {
+            font-size: 1.5rem;
+            color: #111;
+            margin-bottom: 15px;
+            border-left: 4px solid #0066cc;
+            padding-left: 10px;
+        }
+        p {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        /* リストのスタイル */
+        ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        /* インタラクティブ要素（JavaScript検証用） */
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .action-btn {
+            background-color: #0066cc;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .action-btn:hover {
+            background-color: #004499;
+        }
+        .message-box {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #e6f2ff;
+            border-left: 4px solid #0066cc;
+            border-radius: 4px;
+            display: none;
+            font-size: 0.9rem;
+        }
+
+        /* フッター */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8rem;
+            color: #777;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* スマートフォン向け調整（画面幅600px以下） */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+            }
+            .nav-links {
+                gap: 12px;
+            }
+            .nav-links a {
+                font-size: 0.85rem;
+            }
+            section {
+                padding: 20px 15px;
+                margin: 20px 0;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>自己紹介</h1>
-    <p>授業で作成したページです。</p>
+
+    <header>
+        <nav>
+            <div class="logo">My Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#reflection">Reflection</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About</h2>
+            <p>はじめまして。こちらは私の自己紹介用のポートフォリオWebサイトです。現在はWeb開発の基礎や、最新のテクノロジーを活用した効率的なものづくりについて学んでいます。</p>
+            <p>このサイトは、HTML、CSS、JavaScriptを1つのファイルにまとめ、スマートフォンからでも快適に閲覧できるようにデザインされています。</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <p>これまでに触れてきた技術や、現在習得に向けて取り組んでいるスキルの一覧です。</p>
+            <ul>
+                <li><strong>HTML5 / CSS3:</strong> 基本的なマークアップと、メディアクエリを用いたレスポンシブWebデザイン。</li>
+                <li><strong>JavaScript:</strong> DOM操作を中心とした、Webサイトへの動的な機能の追加。</li>
+                <li><strong>LLMの活用:</strong> プロンプトデザインや、AIツールと協働した効率的なコード生成。</li>
+            </ul>
+        </section>
+
+        <section id="works">
+            <h2>Works</h2>
+            <p>これまでに制作した成果物や、取り組んだ演習の記録です。</p>
+            <ul>
+                <li>
+                    <strong>1. 自己紹介用静的Webサイト（本サイト）</strong>
+                    <p style="margin-top: 5px; font-size: 0.85rem; color: #555;">外部ライブラリを一切使用せず、単一のHTMLファイルのみで完結させた軽量なポートフォリオです。</p>
+                </li>
+                <li>
+                    <strong>2. 今後のロードマップ</strong>
+                    <p style="margin-top: 5px; font-size: 0.85rem; color: #555;">今後はAPIを連携させた動的なアプリケーションや、UXに配慮したデザインの構築に挑戦する予定です。</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="reflection">
+            <h2>Reflection</h2>
+            <p>今回のWebサイト制作を通じて、LLM（大規模言語モデル）へ明確な制約条件を提示することの重要性を学びました。「1ファイルにまとめる」「外部CDNを使わない」といった具体的な指示を出すことで、手戻りのない正確な成果物を素早く得られることを実感しました。</p>
+            <p>また、コードを出力させるだけでなく、ユーザーに合わせた文章表現へのカスタマイズや、スマートフォンでの実機検証を重ねることで、より実用的な成果物にブラッシュアップできると感じています。</p>
+
+            <div class="btn-container">
+                <button class="action-btn" id="greetBtn">ここをクリックして挨拶を表示</button>
+                <div class="message-box" id="messageBox">
+                    ご覧いただきありがとうございます！文章はご自身の言葉に適宜書き換えてご活用ください。
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Portfolio. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScriptによる簡易的な動的処理の追加
+        document.addEventListener('DOMContentLoaded', function() {
+            const greetBtn = document.getElementById('greetBtn');
+            const messageBox = document.getElementById('messageBox');
+
+            greetBtn.addEventListener('click', function() {
+                if (messageBox.style.display === 'block') {
+                    messageBox.style.display = 'none';
+                    greetBtn.textContent = 'ここをクリックして挨拶を表示';
+                } else {
+                    messageBox.style.display = 'block';
+                    greetBtn.textContent = 'メッセージを閉じる';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
